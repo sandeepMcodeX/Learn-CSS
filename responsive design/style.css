@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 910px;
+  margin-inline: 25px;
+  margin-block: 20px;
+  display: flex;
+  
+  
+  border-radius:10px 10px 10px 10px ;
+  overflow: hidden;
+}
+.box {
+  width: 100%;
+  min-height: 500px;
+}
+#orange-box {
+  background-color: #e38826;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+#green-box {
+  background-color: #006970;
+}
+#darkgreen-box {
+  background-color: #004241;
+  /* border-radius: 0px 0px 10px 10px; */
+}
+.img {
+  padding: 50px 0px 0px 40px;
+}
+.card-content {
+  padding: 0px 40px 0px 40px;
+}
+.heading-sty {
+  margin-top: 30px;
+  font-family: "Big Shoulders Display";
+  font-size: 2.5em;
+  color: #ffff;
+}
+.para-sty {
+  font-family: "Lexend Deca";
+  color: #ffffff;
+  margin-top: 40px;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.btn-sty {
+  margin-top: 20px;
+
+  border: none;
+  padding: 15px 30px 15px 30px;
+  border-radius: 25px;
+
+  font-family: "Lexend Deca";
+  font-size: 16px;
+}
+.btn-sty-orange {
+  color: #e38826;
+}
+.btn-sty-orange:hover {
+  background-color: #e38826;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+.btn-sty-green {
+  color: #006970;
+}
+.btn-sty-green:hover {
+  background-color: #006970;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+.btn-sty-darkgreen {
+  color: #004241;
+}
+.btn-sty-darkgreen:hover {
+  background-color: #004241;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    max-width: 400px;
+  }
+  .box {
+    width: unset;
+        width: auto;
+  }
+  #orange-box {
+    border-radius: 10px 10px 0px 0px;
+  }
+  #darkgreen-box {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
