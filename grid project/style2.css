@@ -1,0 +1,96 @@
+/* GRID Design Using Grid Area  */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 20px;
+}
+h1 {
+  text-align: center;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-areas: 
+  'purple'
+  'orange'
+  'blue'
+  'green'
+  'pink'
+  ;
+  gap: 16px;
+}
+#box {
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  border-radius: 10px;
+  font-size: 4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.purple-box {
+  background-color: #ba56f6;
+}
+.orange-box {
+  background-color: #ff6161;
+}
+.blue-box {
+  background-color: #505cca;
+}
+.green-box {
+  background-color: #3dad99;
+}
+.pink-box {
+  background-color: #be3690;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 700px;
+    grid-template-areas: 
+    'purple purple'
+    'orange blue'
+    'green blue'
+    'pink pink'
+    ;
+  }
+  #box{
+    max-width:700px;
+    
+  }
+  .purple-box{
+    grid-area: purple;
+  }
+  .blue-box{
+    grid-area: blue;
+  }
+  .pink-box{
+    grid-area: pink;
+  }
+}
+@media(min-width:1000px){
+    body{
+        min-height: 90vh;
+        justify-content: center;
+    }
+    .container{
+        max-width: 1000px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        'purple purple orange blue'
+        'green pink pink blue'
+
+        ;
+    }
+    #box{
+        min-height: 250px;
+    }
+}
